@@ -1,0 +1,213 @@
+{
+  "id": "/subscriptions/3408dea8-8aea-431c-b5a8-f9dff4d3f026/resourceGroups/test/providers/Microsoft.Resources/deployments/CreateVmss-Canonical.UbuntuServer-18.04-LTS-20200404145824",
+  "name": "CreateVmss-Canonical.UbuntuS",
+  "type": "Microsoft.Resources/deployments",
+  "tags": {
+    "primaryResourceId": "/subscriptions/3408dea8-8aea-431c-b5a8-f9dff4d3f026/resourcegroups/test/providers/Microsoft.Compute/virtualMachineScaleSets/ubuset",
+    "marketplaceItemId": "microsoft.vmss"
+  },
+  "properties": {
+    "templateHash": "14900858799645768383",
+    "parameters": {
+      "location": {
+        "type": "String",
+        "value": "southafricanorth"
+      },
+      "virtualMachineScaleSetName": {
+        "type": "String",
+        "value": "ubuset2"
+      },
+      "virtualMachineScaleSetRG": {
+        "type": "String",
+        "value": "test"
+      },
+      "singlePlacementGroup": {
+        "type": "String",
+        "value": "true"
+      },
+      "instanceSize": {
+        "type": "String",
+        "value": "Standard_A1_v2"
+      },
+      "instanceCount": {
+        "type": "String",
+        "value": "2"
+      },
+      "upgradeMode": {
+        "type": "String",
+        "value": "Manual"
+      },
+      "priority": {
+        "type": "String",
+        "value": "Regular"
+      },
+      "enableAcceleratedNetworking": {
+        "type": "String",
+        "value": "false"
+      },
+      "subnetId": {
+        "type": "String",
+        "value": "/subscriptions/cf2deb86-affb-4ba9-8848-ec9428335fa2/resourceGroups/cczTest/providers/Microsoft.Network/virtualNetworks/cczTest-vnet/subnets/default"
+      },
+      "osDiskType": {
+        "type": "String",
+        "value": "Standard_LRS"
+      },
+      "addressPrefixes": {
+        "type": "Array",
+        "value": [
+          "10.1.2.0/24"
+        ]
+      },
+      "subnets": {
+        "type": "Array",
+        "value": [
+          {
+            "name": "default",
+            "properties": {
+              "addressPrefix": "10.1.2.0/24"
+            }
+          }
+        ]
+      },
+      "virtualNetworkId": {
+        "type": "String",
+        "value": "/subscriptions/3408dea8-8aea-431c-b5a8-f9dff4d3f026/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/testvnet550"
+      },
+      "virtualNetworkName": {
+        "type": "String",
+        "value": "testvnet550"
+      },
+      "networkSecurityGroups": {
+        "type": "Array",
+        "value": [
+          {
+            "name": "basicNsgtestvnet550-nic01",
+            "id": "/subscriptions/3408dea8-8aea-431c-b5a8-f9dff4d3f026/resourceGroups/test/providers/Microsoft.Network/networkSecurityGroups/basicNsgtestvnet550-nic01",
+            "rules": []
+          }
+        ]
+      },
+      "networkInterfaceConfigurations": {
+        "type": "Array",
+        "value": [
+          {
+            "name": "testvnet550-nic01",
+            "primary": true,
+            "subnetId": "/subscriptions/3408dea8-8aea-431c-b5a8-f9dff4d3f026/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/testvnet550/subnets/default",
+            "applicationGatewayBackendAddressPools": [],
+            "loadBalancerBackendAddressPools": [],
+            "applicationSecurityGroups": [],
+            "loadBalancerInboundNatPools": [],
+            "enableAcceleratedNetworking": false,
+            "nsgName": "basicNsgtestvnet550-nic01",
+            "nsgId": "/subscriptions/3408dea8-8aea-431c-b5a8-f9dff4d3f026/resourceGroups/test/providers/Microsoft.Network/networkSecurityGroups/basicNsgtestvnet550-nic01",
+            "pipName": ""
+          }
+        ]
+      },
+      "vmName": {
+        "type": "String",
+        "value": "ubuset"
+      },
+      "scaleInPolicy": {
+        "type": "Object",
+        "value": {
+          "rules": [
+            "Default"
+          ]
+        }
+      },
+      "upgradePolicy": {
+        "type": "String",
+        "value": "Manual"
+      },
+      "adminUsername": {
+        "type": "String",
+        "value": "radd"
+      },
+      "adminPassword": {
+        "type": "SecureString"
+      },
+      "platformFaultDomainCount": {
+        "type": "String",
+        "value": "5"
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Succeeded",
+    "timestamp": "2020-04-04T13:04:36.9322826Z",
+    "duration": "PT1M49.0392219S",
+    "correlationId": "96656dce-fd0d-46f8-bf13-14e34613e58c",
+    "providers": [
+      {
+        "namespace": "Microsoft.Network",
+        "resourceTypes": [
+          {
+            "resourceType": "virtualNetworks",
+            "locations": [
+              "southafricanorth"
+            ]
+          },
+          {
+            "resourceType": "networkSecurityGroups",
+            "locations": [
+              "southafricanorth"
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "Microsoft.Compute",
+        "resourceTypes": [
+          {
+            "resourceType": "virtualMachineScaleSets",
+            "locations": [
+              "southafricanorth"
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/3408dea8-8aea-431c-b5a8-f9dff4d3f026/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/testvnet550",
+            "resourceType": "Microsoft.Network/virtualNetworks",
+            "resourceName": "testvnet550"
+          },
+          {
+            "id": "/subscriptions/3408dea8-8aea-431c-b5a8-f9dff4d3f026/resourceGroups/test/providers/Microsoft.Network/networkSecurityGroups/basicNsgtestvnet550-nic01",
+            "resourceType": "Microsoft.Network/networkSecurityGroups",
+            "resourceName": "basicNsgtestvnet550-nic01"
+          }
+        ],
+        "id": "/subscriptions/3408dea8-8aea-431c-b5a8-f9dff4d3f026/resourceGroups/test/providers/Microsoft.Compute/virtualMachineScaleSets/ubuset",
+        "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+        "resourceName": "ubuset"
+      }
+    ],
+    "outputs": {
+      "adminUsername": {
+        "type": "String",
+        "value": "radd"
+      }
+    },
+    "outputResources": [
+      {
+        "id": "/subscriptions/3408dea8-8aea-431c-b5a8-f9dff4d3f026/resourceGroups/test/providers/Microsoft.Compute/virtualMachineScaleSets/ubuset"
+      },
+      {
+        "id": "/subscriptions/3408dea8-8aea-431c-b5a8-f9dff4d3f026/resourceGroups/test/providers/Microsoft.Network/networkSecurityGroups/basicNsgtestvnet550-nic01"
+      },
+      {
+        "id": "/subscriptions/3408dea8-8aea-431c-b5a8-f9dff4d3f026/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/testvnet550"
+      }
+    ],
+    "validationLevel": "Template"
+  }
+}
